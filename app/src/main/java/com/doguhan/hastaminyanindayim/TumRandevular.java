@@ -52,10 +52,8 @@ public class TumRandevular extends AppCompatActivity {
     public void fillListview() {
         myListview = findViewById(R.id.listview);
         DatabaseHelper dbhelper = new DatabaseHelper(this);
-
-        ArrayList<RandevularModel> dogList = dbhelper.getAllData();
-
-        myAdapter = new Adapter(dogList, this);
+        ArrayList<RandevularModel> randevuList = dbhelper.getAllData();
+        myAdapter = new Adapter(randevuList, this);
         myListview.setAdapter(myAdapter);
 
 
@@ -84,7 +82,7 @@ public class TumRandevular extends AppCompatActivity {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.alert_dialog);
 
-        // custom dialog elemanlarını tanımla - text, image ve button
+        // custom dialog elemanlarını tanımla
         tarih = dialog.findViewById(R.id.alert_randevu_tarih);
         saat = dialog.findViewById(R.id.alert_randevu_saat);
         ad = dialog.findViewById(R.id.alertAd);
@@ -219,52 +217,5 @@ public class TumRandevular extends AppCompatActivity {
 
 
 }
-/*
-
-        tarih.setOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View v) {
-        calendar = Calendar.getInstance();
-        year = calendar.get(Calendar.YEAR);
-        month = calendar.get(Calendar.MONTH);
-        dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
-        datePickerDialog = new DatePickerDialog(TumRandevular.this,
-        new DatePickerDialog.OnDateSetListener() {
-@Override
-public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        tarih.setText(day + "/" + (month + 1) + "/" + year);
-        }
-        }, year, month, dayOfMonth);
-        datePickerDialog.show();
-        }
-        });
-        saat.setOnClickListener(new View.OnClickListener() {
-@Override
-public void onClick(View v) {
-// Şimdiki zaman bilgilerini alıyoruz. güncel saat, güncel dakika.
-final Calendar takvim = Calendar.getInstance();
-        int saaat = takvim.get(Calendar.HOUR_OF_DAY);
-        int dakikaa = takvim.get(Calendar.MINUTE);
-
-        TimePickerDialog tpd = new TimePickerDialog(TumRandevular.this, new TimePickerDialog.OnTimeSetListener() {
-
-@Override
-public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        // hourOfDay ve minute değerleri seçilen saat değerleridir.
-        // Edittextte bu değerleri gösteriyoruz.
-        saat.setText(hourOfDay + ":" + minute);
-        }
-        }, saaat, dakikaa, true);
-// timepicker açıldığında set edilecek değerleri buraya yazıyoruz.
-// şimdiki zamanı göstermesi için yukarıda tanımladığımız değişkenleri kullanıyoruz.
-// true değeri 24 saatlik format için.
-
-// dialog penceresinin button bilgilerini ayarlıyoruz ve ekranda gösteriyoruz.
-        tpd.setButton(TimePickerDialog.BUTTON_POSITIVE, "Seç", tpd);
-        tpd.setButton(TimePickerDialog.BUTTON_NEGATIVE, "İptal", tpd);
-        tpd.show();
-        }
-        });*/
-
 
 

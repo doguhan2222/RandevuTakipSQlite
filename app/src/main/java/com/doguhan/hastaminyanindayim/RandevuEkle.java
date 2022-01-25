@@ -1,7 +1,6 @@
 package com.doguhan.hastaminyanindayim;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
@@ -99,7 +98,6 @@ public class RandevuEkle extends AppCompatActivity {
                 hastaNo = hastaNoAl.getText().toString();
                 hastaAciklama = hastaAciklamaAl.getText().toString();
 
-               // float randevuSaati = Float.parseFloat(randevuSaat);
 
                 DatabaseHelper db = new DatabaseHelper(getApplicationContext());
                 db.randevuEkle(randevuTarih,randevuSaat,hastaAdi,hastaSoyadi,hastaNo,hastaAciklama);

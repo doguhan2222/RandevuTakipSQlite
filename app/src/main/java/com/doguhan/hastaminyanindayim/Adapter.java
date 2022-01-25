@@ -5,29 +5,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class Adapter extends BaseAdapter {
 
-    private ArrayList<RandevularModel> dogsList;
+    private ArrayList<RandevularModel> randevuList;
     private Context context;
 
     public Adapter(ArrayList<RandevularModel> list, Context cont) {
-        this.dogsList = list;
+        this.randevuList = list;
         this.context = cont;
     }
 
     @Override
     public int getCount() {
-        return this.dogsList.size();
+        return this.randevuList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.dogsList.get(position);
+        return this.randevuList.get(position);
     }
 
     @Override
@@ -54,7 +53,7 @@ public class Adapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        RandevularModel stu = dogsList.get(position);
+        RandevularModel stu = randevuList.get(position);
         holder.tarih.setText(stu.getRandevuTarih());
         holder.saat.setText(stu.getRandevuSaat());
         holder.ad.setText(stu.getHastaAdi());

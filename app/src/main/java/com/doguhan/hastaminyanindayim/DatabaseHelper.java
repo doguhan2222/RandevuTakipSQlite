@@ -8,9 +8,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-
 import java.util.ArrayList;
-import java.util.List;
+
 // AUTOINCREMENT
 public class DatabaseHelper extends SQLiteOpenHelper {
     String ad;
@@ -67,7 +66,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public ArrayList<RandevularModel> getAllData() {
-        ArrayList<RandevularModel> doglist = new ArrayList<>();
+        ArrayList<RandevularModel> randevuList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from "+TabloBilgileri.NoteEntry.TABLO_ADI,null);
 
@@ -77,9 +76,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
              ad = res.getString(3);
 
             RandevularModel newDog = new RandevularModel(tarih,saat,ad);
-            doglist.add(newDog);
+            randevuList.add(newDog);
         }
-        return doglist;
+        return randevuList;
     }
     public ArrayList<YaklasanRandevularModel> yaklasanRandevulariCek(){
         ArrayList<YaklasanRandevularModel> yaklasanListDB = new ArrayList<>();
