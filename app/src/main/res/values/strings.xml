@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hastamın Yanındayım</string>
+    <string name="giris_ekrani_text1">Yaklaşan Randevularınız</string>
+    <string name="giris_ekrani_text2">Tüm Randevular</string>
+    <string name="giris_ekrani_text3">Randevu Ekle</string>
+    <string name="giris_ekrani_text4">Profil Bilgilerim</string>
+    <string name="hasta_ekle_text1">Tarih Seç:</string>
+    <string name="hasta_ekle_text2">Saat Seç:</string>
+    <string name="hasta_ekle_text3">Hasta Bilgileri</string>
+    <string name="hasta_ekle_text4">Ad:</string>
+    <string name="hasta_ekle_text5">Soyad:</string>
+    <string name="hasta_ekle_text6">Numara:</string>
+    <string name="hasta_ekle_text7">Açıklama:</string>
+    <string name="hasta_ekle_buton1">Ekle</string>
+    <string name="tum_randevular_text1">Tüm Randevularınız</string>
+    <string name="alert_text1">Tarihinde</string>
+    <string name="alert_text2">"'de randevunuz vardır."</string>
+    <string name="alert_text3">"HASTA BİLGİLERİ"</string>
+
+
+</resources>
