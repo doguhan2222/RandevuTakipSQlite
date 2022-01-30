@@ -8,4 +8,4 @@ Randevuları listview içinde listeleme(Tıklanan randevu ile ilgili detaylı bi
 
 Tarihine göre yaklaşan 10 randevu ana ekranda yatay ListView içinde gösterilir.
 
-SQLite database kullanılmıştır.
+SQLite database kullanılmıştır
